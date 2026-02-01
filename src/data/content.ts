@@ -40,16 +40,107 @@ export const content: SiteConfig = {
         },
         services: {
             slug: '/services',
-            title: 'Services',
+            title: 'Our Services',
             sections: [
                 {
-                    id: 'core-services',
-                    title: 'What We Deliver',
-                    content: 'End-to-end digital solutions.',
+                    id: 'service-categories',
+                    title: 'Broad Categories',
+                    content: 'Comprehensive solutions across the digital spectrum.',
                     items: [
-                        { title: 'High Performance Web', description: 'React-based applications optimized for speed.', iconName: 'Zap' },
-                        { title: 'Digital Strategy', description: 'Data-driven growth planning.', iconName: 'TrendingUp' },
-                        { title: 'Motion Design', description: 'Fluid animations that tell a story.', iconName: 'Activity' },
+                        {
+                            title: 'Design',
+                            description: 'Crafting intuitive and beautiful user experiences.',
+                            iconName: 'PenTool',
+                            image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Brand Identity & Logo Design',
+                                'User Interface (UI) & Experience (UX) Design',
+                                'Brand Storytelling & Narrative',
+                                'Visual Design & Graphics',
+                                'Packaging Design',
+                                'Creative & Art Direction',
+                                'Concept Development',
+                                'Campaign Ideation & Execution'
+                            ]
+                        },
+                        {
+                            title: 'Content',
+                            description: 'Strategic storytelling that resonates with your audience.',
+                            iconName: 'FileText',
+                            image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Copywriting & Strategic Content',
+                                'Content Marketing',
+                                'Scriptwriting',
+                                'Podcast Production',
+                                'Blog & Article Creation',
+                                'Social Media Content Creation'
+                            ]
+                        },
+                        {
+                            title: 'Technology',
+                            description: 'Robust engineering and cutting-edge development.',
+                            iconName: 'Cpu',
+                            image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Website Development (Custom & Framer)',
+                                'Mobile App Development',
+                                'eCommerce Platform Development',
+                                'AI-Powered Solutions',
+                                'Custom Software Development',
+                                'Cloud Solutions & Services',
+                                'IT Infrastructure Management',
+                                'Technical Support & Maintenance'
+                            ]
+                        },
+                        {
+                            title: 'Consulting',
+                            description: 'Expert guidance to navigate complex challenges.',
+                            iconName: 'Briefcase',
+                            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Business Strategy Development',
+                                'Go-to-Market Strategy',
+                                'Market Research & Analysis',
+                                'Competitive Landscape Assessment',
+                                'Customer Journey Mapping',
+                                'Predictive Modeling & Statistical Analysis',
+                                'Data-Driven Insights',
+                                'Strategic Partnerships'
+                            ]
+                        },
+                        {
+                            title: 'Communication',
+                            description: 'Clear and effective messaging strategies.',
+                            iconName: 'MessageCircle',
+                            image: 'https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Performance Marketing (PPC, Paid Social)',
+                                'SEO & SEM',
+                                'Social Media Marketing & Management',
+                                'Influencer Marketing & Vetting',
+                                'PR Strategy & Media Buying',
+                                'Email Marketing & WhatsApp Broadcasts',
+                                'Conversion Rate Optimization (CRO)',
+                                'Cross-Channel Media Measurement'
+                            ]
+                        },
+                        {
+                            title: 'Production',
+                            description: 'High-quality asset creation and media production.',
+                            iconName: 'Camera',
+                            image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=800&auto=format&fit=crop',
+                            details: [
+                                'Film & Video Production',
+                                'VFX & Motion Graphics',
+                                'Photography & Image Editing',
+                                'Event Planning & Management',
+                                'Brand Activations & Pop-ups',
+                                'Live Commerce Management',
+                                'Experiential Marketing',
+                                'Sponsorships & Partnerships'
+                            ]
+                        },
                     ],
                 },
             ],

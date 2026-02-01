@@ -3,14 +3,22 @@ import { content } from '../data/content';
 import { AnimatedSection } from '../components/AnimatedSection';
 import { ServiceCard } from '../components/ServiceCard';
 
+import { motion } from 'framer-motion';
+
 export const Services: React.FC = () => {
     const { title, sections } = content.pages.services;
 
     return (
-        <div className="pt-20">
-            <div className="px-6 py-20 bg-surface/30">
-                <div className="max-w-7xl mx-auto">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">{title}</h1>
+        <div className="">
+            <div className="px-6 py-24">
+                <div className="max-w-7xl mx-auto text-center">
+                    <motion.h1
+                        className="text-6xl md:text-8xl font-bold mb-0 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-300% pb-2"
+                        animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                        transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
+                    >
+                        {title}
+                    </motion.h1>
                 </div>
             </div>
 

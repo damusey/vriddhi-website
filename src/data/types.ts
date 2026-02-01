@@ -18,6 +18,7 @@ export interface ServiceItem {
     description: string;
     iconName: string;
     image?: string;
+    details?: string[];
 }
 
 export interface SectionContent {
