@@ -105,7 +105,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item, index }) => {
                         )}
 
                         <div className="mt-auto pt-6 border-t border-white/10 text-center">
-                            <p className="text-xs text-white/40 italic">Wriddhi Strategic Solutions</p>
+                            <p className="text-xs text-white/40 italic">Narrativlyy Strategic Solutions</p>
                         </div>
                     </div>
                 </div>

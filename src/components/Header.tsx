@@ -10,9 +10,9 @@ export const Header: React.FC = () => {
 
     return (
         <header className="fixed top-0 left-0 right-0 z-50 bg-brand-black/80 backdrop-blur-lg border-b border-white/5">
-            <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-                <NavLink to="/" className="text-2xl font-bold tracking-tighter text-white">
-                    {content.name}
+            <div className="max-w-7xl mx-auto px-6 h-[90px] flex items-center justify-between">
+                <NavLink to="/" className="flex items-center relative">
+                    <img src="/logo.png" alt="Narrativlyy" className="h-[135px] w-auto object-contain brightness-200" />
                 </NavLink>
 
                 {/* Desktop */}

@@ -1,7 +1,7 @@
 import type { SiteConfig } from './types';
 
 export const content: SiteConfig = {
-    name: 'Wriddhi',
+    name: 'Narrativlyy',
     navItems: [
         { label: 'Home', href: '/' },
         { label: 'Services', href: '/services' },
@@ -10,7 +10,7 @@ export const content: SiteConfig = {
         { label: 'Contact', href: '/contact' },
         { label: 'Getting Started', href: '/getting-started' },
     ],
-    footerText: '© 2024 Wriddhi. All rights reserved.',
+    footerText: '© 2024 Narrativlyy. All rights reserved.',
     socialLinks: [
         { platform: 'Twitter', url: '#' },
         { platform: 'LinkedIn', url: '#' },

@@ -7,7 +7,7 @@ export const CaseStudies: React.FC = () => {
     const { title, sections } = content.pages['case-studies'];
 
     return (
-        <div className="pt-20">
+        <div className="pt-24">
             <div className="px-6 py-20 bg-surface/30">
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>

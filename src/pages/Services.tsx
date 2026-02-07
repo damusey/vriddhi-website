@@ -9,8 +9,8 @@ export const Services: React.FC = () => {
     const { title, sections } = content.pages.services;
 
     return (
-        <div className="">
-            <div className="px-6 py-24">
+        <div className="pt-24">
+            <div className="px-6 py-32">
                 <div className="max-w-7xl mx-auto text-center">
                     <motion.h1
                         className="text-6xl md:text-8xl font-bold mb-0 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-300% pb-2"

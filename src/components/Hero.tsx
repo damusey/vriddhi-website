@@ -11,7 +11,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ data }) => {
     return (
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden pt-24">
             {/* Background Layer */}
             {/* Background Layer */}
             <div className="absolute inset-0 z-0 bg-transparent">
