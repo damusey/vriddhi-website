@@ -23,19 +23,25 @@ export const Header: React.FC = () => {
                             to={item.href}
                             className={({ isActive }) =>
                                 clsx(
-                                    "text-sm font-medium transition-colors duration-200",
-                                    isActive ? "text-white" : "text-text-muted hover:text-white"
+                                    "text-sm font-medium transition-colors duration-200 font-sans",
+                                    isActive ? "text-brand-silver" : "text-text-muted hover:text-brand-silver"
                                 )
                             }
                         >
                             {item.label}
                         </NavLink>
                     ))}
+                    <NavLink
+                        to={content.ctaButton.href}
+                        className="px-6 py-2.5 rounded-full bg-brand-peach text-brand-black text-sm font-semibold hover:brightness-110 hover:scale-105 transition-all duration-300 shadow-lg shadow-brand-peach/20"
+                    >
+                        {content.ctaButton.label}
+                    </NavLink>
                 </nav>
 
                 {/* Mobile Toggle */}
                 <button
-                    className="md:hidden text-white p-2"
+                    className="md:hidden text-brand-silver p-2"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
@@ -61,13 +67,20 @@ export const Header: React.FC = () => {
                                     className={({ isActive }) =>
                                         clsx(
                                             "text-lg font-medium transition-colors duration-200",
-                                            isActive ? "text-white" : "text-text-muted hover:text-white"
+                                            isActive ? "text-brand-silver" : "text-text-muted hover:text-brand-silver"
                                         )
                                     }
                                 >
                                     {item.label}
                                 </NavLink>
                             ))}
+                            <NavLink
+                                to={content.ctaButton.href}
+                                onClick={() => setIsOpen(false)}
+                                className="mt-2 px-6 py-3 rounded-full bg-brand-peach text-brand-black text-center text-lg font-semibold"
+                            >
+                                {content.ctaButton.label}
+                            </NavLink>
                         </div>
                     </motion.nav>
                 )}

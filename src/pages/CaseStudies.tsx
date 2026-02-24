@@ -8,15 +8,15 @@ export const CaseStudies: React.FC = () => {
 
     return (
         <div className="pt-24">
-            <div className="px-6 py-20 bg-surface/30">
+            <div className="px-6 bg-surface/30">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
+                    <h1 className="text-6xl font-bold text-brand-silver mb-6 uppercase">{title}</h1>
                 </div>
             </div>
 
             {sections.map((section) => (
                 <AnimatedSection key={section.id}>
-                    <h2 className="text-3xl font-bold mb-6 text-white">{section.title}</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-peach uppercase font-sans">{section.title}</h2>
                     <p className="text-lg text-text-muted leading-relaxed max-w-4xl mb-12">{section.content}</p>
 
                     {section.items && (

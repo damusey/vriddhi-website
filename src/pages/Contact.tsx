@@ -11,25 +11,19 @@ export const Contact: React.FC = () => {
         {
             icon: 'Mail',
             label: 'Email Us',
-            value: 'hello@narrativlyy.com',
-            link: 'mailto:hello@narrativlyy.com'
+            value: content.footer.email,
+            link: `mailto:${content.footer.email}`
         },
         {
             icon: 'Phone',
             label: 'Call Us',
-            value: '+91 98765 43210',
-            link: 'tel:+919876543210'
+            value: content.footer.phone,
+            link: `tel:${content.footer.phone}`
         },
-        {
-            icon: 'MapPin',
-            label: 'Visit Us',
-            value: 'South Extension II, New Delhi, India',
-            link: 'https://goo.gl/maps/example'
-        }
     ];
 
     return (
-        <div className="relative min-h-screen pt-28 overflow-hidden">
+        <div className="relative min-h-screen overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <motion.div
@@ -39,7 +33,7 @@ export const Contact: React.FC = () => {
                         opacity: [0.3, 0.5, 0.3]
                     }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-blue-500/10 rounded-full blur-[120px]"
+                    className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-brand-blue/10 rounded-full blur-[120px]"
                 />
                 <motion.div
                     animate={{
@@ -48,7 +42,7 @@ export const Contact: React.FC = () => {
                         opacity: [0.2, 0.4, 0.2]
                     }}
                     transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                    className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-purple-500/10 rounded-full blur-[140px]"
+                    className="absolute -bottom-[20%] -right-[10%] w-[70%] h-[70%] bg-brand-peach/5 rounded-full blur-[140px]"
                 />
             </div>
 
@@ -62,16 +56,12 @@ export const Contact: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <motion.h1
-                                className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-300% pb-2"
-                                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                                transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                            >
-                                {title}
-                            </motion.h1>
+                            <h1 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-brand-offwhite font-sans leading-[60px] uppercase">
+                                {sections[0]?.title || title}
+                            </h1>
 
-                            <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-xl leading-relaxed">
-                                {sections[0]?.content || "Let's build something exceptional together. Connect with us to transform your vision into reality."}
+                            <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-xl leading-relaxed font-serif">
+                                {sections[0]?.content || "Let's build something exceptional together."}
                             </p>
 
                             <div className="space-y-6">
@@ -82,14 +72,14 @@ export const Contact: React.FC = () => {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: 0.4 + (idx * 0.1), duration: 0.6 }}
-                                        className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all group group-hover:shadow-[0_0_30px_rgba(255,255,255,0.05)]"
+                                        className="flex items-center gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-brand-blue/30 transition-all group"
                                     >
-                                        <div className="p-4 rounded-xl bg-white/10 text-white group-hover:scale-110 transition-transform">
+                                        <div className="p-4 rounded-xl bg-brand-blue/20 text-brand-silver group-hover:scale-110 transition-transform">
                                             <DynamicIcon name={info.icon} size={28} />
                                         </div>
                                         <div>
                                             <p className="text-sm font-medium text-text-muted uppercase tracking-widest mb-1">{info.label}</p>
-                                            <p className="text-lg text-white font-semibold">{info.value}</p>
+                                            <p className="text-lg text-brand-offwhite font-semibold">{info.value}</p>
                                         </div>
                                     </motion.a>
                                 ))}
@@ -105,51 +95,76 @@ export const Contact: React.FC = () => {
                             transition={{ delay: 0.2, duration: 0.8 }}
                             className="relative p-8 md:p-12 rounded-[2.5rem] bg-surface/40 backdrop-blur-2xl border border-white/10 shadow-2xl overflow-hidden"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-peach/5 pointer-events-none" />
 
-                            <h2 className="text-3xl font-bold mb-8 text-white relative z-10">Start a conversation</h2>
+                            <h2 className="text-3xl font-bold mb-8 text-brand-peach relative z-10 font-sans">Start a conversation</h2>
 
                             <form className="space-y-8 relative z-10" onSubmit={(e) => e.preventDefault()}>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div className="group relative">
-                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-blue-400 transition-colors">Your Name</label>
+                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">Your Name</label>
                                         <input
                                             type="text"
-                                            className="w-full px-6 py-4 rounded-2xl bg-black/20 border border-white/5 focus:border-blue-500/50 focus:bg-black/40 focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all text-white placeholder-white/20"
+                                            className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver placeholder-white/20"
                                             placeholder="John Doe"
                                         />
                                     </div>
                                     <div className="group relative">
-                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-blue-400 transition-colors">Email Address</label>
+                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">Email Address</label>
                                         <input
                                             type="email"
-                                            className="w-full px-6 py-4 rounded-2xl bg-black/20 border border-white/5 focus:border-blue-500/50 focus:bg-black/40 focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all text-white placeholder-white/20"
+                                            className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver placeholder-white/20"
                                             placeholder="john@example.com"
                                         />
                                     </div>
                                 </div>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                    <div className="group relative">
+                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">Company / Organization</label>
+                                        <input
+                                            type="text"
+                                            className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver placeholder-white/20"
+                                            placeholder="Your Company"
+                                        />
+                                    </div>
+                                    <div className="group relative">
+                                        <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">Your Role</label>
+                                        <input
+                                            type="text"
+                                            className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver placeholder-white/20"
+                                            placeholder="e.g. Founder, CMO"
+                                        />
+                                    </div>
+                                </div>
                                 <div className="group relative">
-                                    <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-blue-400 transition-colors">How can we help?</label>
-                                    <select className="w-full px-6 py-4 rounded-2xl bg-black/20 border border-white/5 focus:border-blue-500/50 focus:bg-black/40 focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all text-white appearance-none cursor-pointer">
-                                        <option>Digital Strategy</option>
-                                        <option>Brand Identity</option>
-                                        <option>Product Development</option>
-                                        <option>Marketing & Communication</option>
+                                    <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">How can we help?</label>
+                                    <select className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver appearance-none cursor-pointer">
+                                        <option value="">Select a service</option>
+                                        <option>Strategic Advisory & Consulting</option>
+                                        <option>Brand, Creative & Identity</option>
+                                        <option>Platforms & Development</option>
+                                        <option>AI & Innovation</option>
+                                        <option>Digital Marketing & SEO</option>
+                                        <option>Performance Marketing</option>
+                                        <option>Social Media & Community</option>
+                                        <option>Content, Film & Production</option>
+                                        <option>PR, Media & Communications</option>
+                                        <option>Experiential & Events</option>
                                         <option>Other</option>
                                     </select>
                                 </div>
                                 <div className="group relative">
-                                    <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-blue-400 transition-colors">Message</label>
+                                    <label className="block text-sm font-medium text-text-muted mb-3 group-focus-within:text-brand-peach transition-colors">Message</label>
                                     <textarea
                                         rows={6}
-                                        className="w-full px-6 py-4 rounded-2xl bg-black/20 border border-white/5 focus:border-blue-500/50 focus:bg-black/40 focus:outline-none focus:ring-1 focus:ring-blue-500/50 transition-all text-white placeholder-white/20 resize-none"
+                                        className="w-full px-6 py-4 rounded-2xl bg-brand-black/40 border border-white/5 focus:border-brand-blue/50 focus:bg-brand-black/60 focus:outline-none focus:ring-1 focus:ring-brand-blue/50 transition-all text-brand-silver placeholder-white/20 resize-none"
                                         placeholder="Tell us about your project or vision..."
                                     />
                                 </div>
 
                                 <Button
                                     variant="primary"
-                                    className="w-full py-5 rounded-2xl text-lg font-bold group shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-blue-500/20"
+                                    className="w-full py-5 rounded-2xl text-lg font-bold group"
                                 >
                                     <span className="flex items-center justify-center gap-2">
                                         Send Message

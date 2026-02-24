@@ -54,7 +54,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item, index }) => {
                         <div className="mb-6 p-4 rounded-2xl bg-white/10 w-fit backdrop-blur-2xl border border-white/10 shadow-2xl">
                             <DynamicIcon name={item.iconName} className="text-white" size={40} />
                         </div>
-                        <h3 className="text-3xl font-bold text-white mb-6 tracking-tight">{item.title}</h3>
+                        <h3 className="text-xl md:text-2xl font-bold text-brand-blue-light mb-4 tracking-tight uppercase">{item.title}</h3>
                         <p className="text-gray-300 leading-relaxed text-lg max-w-xs">
                             {item.description}
                         </p>
@@ -82,7 +82,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ item, index }) => {
                             <div className="p-2 rounded-xl bg-white/10 border border-white/10">
                                 <DynamicIcon name={item.iconName} className="text-white" size={24} />
                             </div>
-                            <h4 className="text-xl font-bold text-white uppercase tracking-wider">{item.title} Details</h4>
+                            <h4 className="text-lg font-bold text-brand-offwhite uppercase tracking-wider">{item.title} Details</h4>
                         </div>
 
                         {item.details && (

@@ -18,10 +18,10 @@ export const Button: React.FC<ButtonProps> = ({
     variant = 'primary',
     className
 }) => {
-    const baseStyles = "px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer";
+    const baseStyles = "px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer font-sans";
     const variants = {
-        primary: "bg-text-primary text-brand-black hover:bg-white hover:scale-105",
-        outline: "border border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
+        primary: "bg-brand-peach text-brand-black hover:brightness-110 hover:scale-105 shadow-lg shadow-brand-peach/20",
+        outline: "border border-brand-silver/20 text-brand-silver hover:bg-white/10 backdrop-blur-sm"
     };
 
     const content = (
