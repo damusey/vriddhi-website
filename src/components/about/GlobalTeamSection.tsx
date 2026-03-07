@@ -10,7 +10,7 @@ export const GlobalTeamSection: React.FC = () => {
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-peach/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/3 translate-y-1/3" />
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            <div className="container-wide px-6 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Text Content */}
                     <AnimatedSection className="!mb-0">
@@ -20,7 +20,7 @@ export const GlobalTeamSection: React.FC = () => {
                         <h2 className="text-4xl md:text-5xl font-bold font-sans text-brand-offwhite mb-6 leading-tight">
                             A Collective of Sharp Thinkers & Creative Makers
                         </h2>
-                        <div className="space-y-6 text-lg text-brand-silver font-serif leading-relaxed">
+                        <div className="space-y-6 text-lg text-brand-silver  leading-relaxed">
                             <p>
                                 We are not confined by geography. Our network spans across continents, bringing together diverse perspectives, cultural intelligence, and specialized expertise.
                             </p>

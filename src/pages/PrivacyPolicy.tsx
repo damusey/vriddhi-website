@@ -6,7 +6,7 @@ export const PrivacyPolicy: React.FC = () => {
     return (
         <div>
             <div className="px-5 py-5">
-                <div className="max-w-7xl mx-auto text-center">
+                <div className="container-wide text-center">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ export const PrivacyPolicy: React.FC = () => {
 
             <AnimatedSection>
                 <div className="max-w-4xl mx-auto">
-                    <div className="space-y-8 text-text-muted leading-relaxed font-serif">
+                    <div className="space-y-8 text-text-muted leading-relaxed ">
                         <p>
                             At Narrativlyy (referred to as "Narrativlyy", "we", "our", or "us"), we believe that trust is built through transparency. As a full-service marketing agency, we work closely with people, ideas, and businesses — and we treat your data with the same care and respect we bring to our work.
                         </p>

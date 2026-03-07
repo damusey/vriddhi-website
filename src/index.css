@@ -57,3 +57,71 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+/* Responsive container that expands on ultra-wide screens */
+.container-wide {
+    max-width: 80rem;
+    /* 1280px = 7xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1536px) {
+    .container-wide {
+        max-width: 90rem;
+        /* 1440px */
+    }
+}
+
+@media (min-width: 1920px) {
+    .container-wide {
+        max-width: 112.5rem;
+        /* 1800px */
+    }
+}
+
+/* ===== Global Card Hover Effect ===== */
+.card-hover {
+    position: relative;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg,
+            rgba(59, 92, 160, 0),
+            rgba(59, 92, 160, 0),
+            rgba(255, 203, 175, 0));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card-hover:hover {
+    transform: scale(1.03);
+}
+
+.card-hover:hover::after {
+    opacity: 1;
+    background: linear-gradient(135deg,
+            rgba(59, 92, 160, 0.6),
+            rgba(43, 66, 124, 0.4),
+            rgba(255, 203, 175, 0.5));
+}
+
+/* Glow shadow on hover */
+.card-hover:hover {
+    box-shadow: 0 0 20px rgba(59, 92, 160, 0.15),
+        0 0 40px rgba(255, 203, 175, 0.08);
+}

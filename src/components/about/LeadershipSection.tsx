@@ -9,13 +9,13 @@ export const LeadershipSection: React.FC = () => {
 
     return (
         <section className="py-24 bg-surface relative">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="container-wide px-6">
                 <AnimatedSection className="text-center mb-16">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] border border-brand-peach/30 bg-brand-peach/10 text-brand-peach mb-6">
                         Our Leadership
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold font-sans text-brand-offwhite">Driving the Vision</h2>
-                    <p className="mt-4 text-brand-silver font-serif text-lg max-w-2xl mx-auto">
+                    <p className="mt-4 text-brand-silver  text-lg max-w-2xl mx-auto">
                         Guided by experience, rooted in strategy, and driven by a relentless pursuit of excellence.
                     </p>
                 </AnimatedSection>

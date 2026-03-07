@@ -46,6 +46,7 @@ export interface ServiceCategory {
     tagline?: string;
     description?: string;
     services: string[];
+    image?: string;
 }
 
 export interface ServicePillar {

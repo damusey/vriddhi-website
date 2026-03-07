@@ -9,14 +9,14 @@ export const Footer: React.FC = () => {
 
     return (
         <footer className="w-full mt-auto border-t border-white/5 bg-brand-charcoal">
-            <div className="max-w-7xl mx-auto px-6 py-16">
+            <div className="container-wide px-6 py-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     {/* Logo & Tagline */}
                     <div className="lg:col-span-2">
-                        <NavLink to="/" className="inline-block mb-4">
-                            <img src="/logo.png" alt="Narrativlyy" className="h-[100px] w-auto object-contain brightness-200" />
+                        <NavLink to="/" className="inline-block mb-4 overflow-hidden h-[80px]">
+                            <img src="/logo.png" alt="Narrativlyy" className="h-[200px] w-auto object-contain brightness-200 -mt-[60px]" />
                         </NavLink>
-                        <p className="text-text-muted text-sm leading-relaxed max-w-md font-serif">
+                        <p className="text-text-muted text-sm leading-relaxed max-w-md ">
                             {footer.tagline}
                         </p>
                         <NavLink
@@ -29,7 +29,6 @@ export const Footer: React.FC = () => {
 
                     {/* Navigation */}
                     <div>
-                        <h4 className="text-brand-silver text-sm font-semibold uppercase tracking-widest mb-6">Pages</h4>
                         <ul className="space-y-3">
                             {footer.navLinks.map((link) => (
                                 <li key={link.href}>
@@ -83,7 +82,7 @@ export const Footer: React.FC = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-white/5">
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-serif text-brand-silver">
+                <div className="container-wide px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs  text-brand-silver">
                     <p>{content.footer.copyright}</p>
                     <div className="flex gap-4">
                         <Link to="/privacy-policy" className="hover:text-brand-peach transition-colors">Privacy Policy</Link>

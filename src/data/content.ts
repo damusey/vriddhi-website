@@ -12,7 +12,7 @@ export const content: SiteConfig = {
     footer: {
         tagline: 'Powering global brands with integrated marketing solutions and performance-first ecosystems to unlock your next dimension of growth.',
         email: 'info@narrativlyy.com',
-        phone: '9953655919',
+        phone: '+91 9953655919',
         navLinks: [
             { label: 'About Us', href: '/about' },
             { label: 'Services', href: '/services' },
@@ -45,10 +45,6 @@ export const content: SiteConfig = {
 
     differentiators: [
         {
-            title: 'One-Stop Hub for Brand, Marketing & Growth',
-            description: 'We are a collective of sharp thinkers and creative makers delivering scalable, strategic solutions that redefine how brands think, communicate, and influence to help your brand stand out across all growth channels.',
-        },
-        {
             title: 'Hyper-Customized Strategies',
             description: 'We craft bespoke brand positioning and go-to-market frameworks carefully tailored to align with your category, competitive landscape, and business needs.',
         },
@@ -71,18 +67,17 @@ export const content: SiteConfig = {
     ],
 
     metrics: [
-        { value: '250', suffix: '+', label: 'Projects Completed' },
+        { value: '100', suffix: '+', label: 'Projects Completed' },
         { value: '15', suffix: '+', label: 'Years Experience' },
-        { prefix: '$', value: '50', suffix: 'M+', label: 'Enterprise Managed' },
         { value: '98', suffix: '%', label: 'Client Retention' }
     ],
 
     clientBrands: [
-        'Bharat Semi', 'Retailabs', 'Acme Corp', 'TechFlow', 'Stellar', 'GlobalEdge', 'Nexus', 'Pinnacle'
+        'Bharat Semi', 'Retailabs', 'Clean4Wheels', 'UrbanSoft', 'Hawaiadda', 'MaaliOnDoor', 'KnowYourCollege', 'Auraynia', 'Epiyola', 'SariVerse',
     ],
 
     globalLocations: [
-        { city: 'New Delhi', country: 'India', address: 'Cyber Hub, Sector 29' },
+        { city: 'Gurugram', country: 'India', address: 'Cyber Hub' },
         { city: 'Dubai', country: 'UAE', address: 'Dubai Design District' },
         { city: 'London', country: 'UK', address: 'Soho Square' },
         { city: 'Singapore', country: 'Singapore', address: 'Marina Bay Financial Centre' },
@@ -115,6 +110,7 @@ export const content: SiteConfig = {
                         'Business & Growth Strategy',
                         'Strategic Partnerships & Alliances',
                     ],
+                    image: '/images/services/THINK-Strategic-Advisory.webp',
                 },
                 {
                     tagline: 'Intelligence That Drives Action',
@@ -130,6 +126,7 @@ export const content: SiteConfig = {
                         'Privacy & Compliance Advisory',
                         'CRM Strategy & Implementation',
                     ],
+                    image: '/images/services/CRM-Data-and-Intelligence-1.webp',
                 },
             ],
         },
@@ -152,6 +149,7 @@ export const content: SiteConfig = {
                         'Brand Guidelines & Governance',
                         'Creative Direction & Visualization',
                     ],
+                    image: '/images/services/CREATE-Brand-Creative-and-Identity-System.webp',
                 },
                 {
                     tagline: 'The Architecture Of Interaction',
@@ -167,6 +165,7 @@ export const content: SiteConfig = {
                         'Performance Optimization & Scalability',
                         'Ongoing Technical Maintenance',
                     ],
+                    image: '/images/services/CREATE-Platforms-and-Development.webp',
                 },
                 {
                     tagline: 'Innovation With Intent',
@@ -181,6 +180,7 @@ export const content: SiteConfig = {
                         'Automation & Workflow Systems',
                         'Data Engineering & Management',
                     ],
+                    image: '/images/services/CREATE-AI-and-Innovation.webp',
                 },
                 {
                     tagline: 'Where Stories Come Alive',
@@ -196,6 +196,7 @@ export const content: SiteConfig = {
                         'Live Commerce & Shoppable Content Management',
                         'Production Management & Line Producing',
                     ],
+                    image: '/images/services/CREATE-Content-Film-Production.webp',
                 },
             ],
         },
@@ -220,6 +221,7 @@ export const content: SiteConfig = {
                         'Website & Platform Audit',
                         'Analytics & Performance Reporting',
                     ],
+                    image: '/images/services/INFLUENCE-Organic-Growth-Digital-Marketing-1.webp',
                 },
                 {
                     tagline: 'Own The Conversation',
@@ -236,6 +238,7 @@ export const content: SiteConfig = {
                         'Social Listening & Sentiment Intelligence',
                         'Performance Tracking & Reporting',
                     ],
+                    image: '/images/services/INFLUENCE-Social-Media-Community-Influence.webp',
                 },
                 {
                     tagline: 'Precision That Powers Growth',
@@ -253,6 +256,7 @@ export const content: SiteConfig = {
                         'A/B Testing & Experimentation',
                         'Attribution Modeling & Measurement',
                     ],
+                    image: '/images/services/INFLUENCE-Performance-Marketing-Growth-Media.webp',
                 },
                 {
                     tagline: 'Authority Beyond The Screen',
@@ -267,6 +271,7 @@ export const content: SiteConfig = {
                         'ROI & Effectiveness Analysis',
                         'Reputation & Press Relations Strategy',
                     ],
+                    image: '/images/services/INFLUENCE-PR-Media-Communications.webp',
                 },
                 {
                     tagline: 'The Science Of Retention',
@@ -281,6 +286,7 @@ export const content: SiteConfig = {
                         'Commerce & Marketplace Management',
                         'D2C & Omnichannel Enablement',
                     ],
+                    image: '/images/services/INFLUENCE-Direct-Lifecycle-Commerce-Marketing.webp',
                 },
             ],
         },
@@ -304,6 +310,7 @@ export const content: SiteConfig = {
                         'Experiential Technology Integration',
                         'Corporate Events & Leadership Summits',
                     ],
+                    image: '/images/services/EXPERIENCE-Experiential-Retail-Offline-1.webp',
                 },
             ],
         },
@@ -418,7 +425,23 @@ export const content: SiteConfig = {
         },
         {
             brand: 'Retailabs',
-            servicesProvided: 'Strategic Consulting, Social Media',
+            servicesProvided: 'Strategic Consulting, Social Media, GenAI',
+        },
+        {
+            brand: 'SariVerse',
+            servicesProvided: 'Brand Identity, eCommerce Strategy, Shopify Development, PR Media',
+        },
+        {
+            brand: 'Clean4Wheels',
+            servicesProvided: 'Brand Identity, Website Development, Performance Marketing, SEO',
+        },
+        {
+            brand: 'Hawaiadda',
+            servicesProvided: 'Brand Strategy, Social Media Marketing, Paid Media, Influencer Marketing',
+        },
+        {
+            brand: 'KnowYourCollege',
+            servicesProvided: 'Website Development, SEO, Performance Marketing, Content Strategy',
         },
     ],
 
@@ -490,8 +513,8 @@ export const content: SiteConfig = {
                 ctaLink: '/contact',
                 backgroundMedia: {
                     type: 'video',
-                    src: 'https://framerusercontent.com/assets/53oqoRSg9UvyNuylUWkzwJklqM.mp4',
-                    alt: 'Abstract digital background',
+                    src: '/videos/hero-banner.mp4',
+                    alt: 'Wriddhi hero background',
                 }
             },
             sections: [
@@ -520,46 +543,55 @@ export const content: SiteConfig = {
                             title: 'Clarity Creates Momentum',
                             description: 'Clarity forges confidence! When a brand is unequivocal about its purpose, decisions accelerate and impact compounds. We strip away the peripheral to reveal the essential—so every narrative moves with intent and growth becomes inevitable, never accidental.',
                             iconName: 'Zap',
+                            image: '/images/ethos/Clarity-Creates-Momentum-h.webp',
                         },
                         {
                             title: 'Intelligence, Then Imagination',
                             description: 'Thinking precedes expression, always! We believe that strategy gives imagination its edge, its direction, and its power. We lead with erudition to ensure that when we speak, the world listens and remembers.',
                             iconName: 'Brain',
+                            image: '/images/ethos/Intelligence-Then-Imagination-h.webp',
                         },
                         {
                             title: 'Distinction Is Non-Negotiable',
                             description: 'Blending in is the fastest way to disappear. True differentiation is strategic, not stylistic. We help brands stand apart in ways that are meaningful, credible, and difficult to replicate.',
                             iconName: 'Fingerprint',
+                            image: '/images/ethos/Distinction-Is-Non-Negotiable-h.webp',
                         },
                         {
                             title: 'The Power Of One',
                             description: 'A fragmented brand is an expensive mistake! We ensure every touchpoint—from high-level strategy to granular wireframes — speaks with one unshakeable voice. In a world of fleeting attention, consistency isn\'t just a virtue; it’s the ultimate competitive advantage.',
                             iconName: 'Layers',
+                            image: '/images/ethos/The-Power-of-one-h.webp',
                         },
                         {
                             title: 'Partnership, Not Dependency',
                             description: 'We don’t aim to be an extension of execution — we aim to be your thinking partner. Our goal is to elevate internal clarity, sharpen decision-making, and leave brands stronger than we found them.',
                             iconName: 'Users',
+                            image: '/images/ethos/Partnership-Not-Dependency-h.webp',
                         },
                         {
                             title: 'Ahead, On Purpose',
                             description: 'Every decision we make is an intentional bet on what wins. We operate with strategic foresight, making decisions based on a long-term view of value. Our work is a catalyst for momentum, ensuring our partners are always positioned several moves ahead of the curve.',
                             iconName: 'Telescope',
+                            image: '/images/ethos/Ahead-On-Purpose-h.webp',
                         },
                         {
                             title: 'Systems Over Moments',
                             description: 'One-off moments don’t build brands — connected systems do. We design narratives that compound over time, where strategy, content, performance, and experience reinforce each other instead of operating in silos.',
                             iconName: 'Network',
+                            image: '/images/ethos/Systems-Over-Moments-h.webp',
                         },
                         {
                             title: 'Your Wins Are Our Wins',
                             description: 'We\'re committed to your growth. We internalize your audience, purpose, and challenges as our own - crafting compelling campaigns that translate into measurable market authority. Because staying ahead requires breakthrough ideas, unparalleled conviction, and a balanced approach - that\'s precisely what we offer!',
                             iconName: 'Award',
+                            image: '/images/ethos/Your-Wins-Are-Our-Wins-h.webp',
                         },
                         {
                             title: 'Nothing Ordinary Endures',
                             description: 'Ordinary thinking leads to ordinary outcomes. We don\'t do either. We exist to challenge the expected - combining strategic clarity with creative intelligence and tech-forward methodologies to to serve founders, industry leaders, and ambitious brands who refuse to be ordinary.',
                             iconName: 'Star',
+                            image: '/images/ethos/Nothing-Ordinary-Endures-h.webp',
                         },
                     ],
                 }

@@ -10,7 +10,7 @@ export const BrandSlider: React.FC = () => {
 
     return (
         <section className="py-20 bg-surface border-y border-white/5 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
+            <div className="container-wide px-6 mb-12 text-center">
                 <h3 className="text-sm tracking-[0.2em] text-brand-silver/60 uppercase font-semibold">
                     Trusted By Ambitious Brands
                 </h3>

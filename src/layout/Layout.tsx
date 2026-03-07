@@ -25,6 +25,16 @@ export const Layout: React.FC = () => {
                     </motion.div>
                 </AnimatePresence>
             </main>
+
+            {/* Narrativlyy Footer Logo */}
+            <section className="w-full flex justify-center py-8" style={{ backgroundColor: '#1e2024' }}>
+                <img
+                    src="/narratively-footer.png"
+                    alt="Narrativlyy"
+                    className="w-1/2 h-auto object-contain"
+                />
+            </section>
+
             <Footer />
         </div>
     );

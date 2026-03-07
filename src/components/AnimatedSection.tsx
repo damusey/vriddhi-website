@@ -45,7 +45,7 @@ export const AnimatedSection: React.FC<AnimatedSectionProps> = ({
             transition={{ duration: 0.7, delay: isVisible ? delay : 0, ease: "easeOut" }}
             className={clsx("pt-0 pb-20 px-6", className)}
         >
-            <div className="max-w-7xl mx-auto">
+            <div className="container-wide">
                 {children}
             </div>
         </motion.section>

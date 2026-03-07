@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import type { ServiceItem } from '../data/types';
 import { DynamicIcon } from './ui/DynamicIcon';
 import clsx from 'clsx';
-import { MediaContainer } from './ui/MediaContainer';
+
 
 interface EthosCardProps {
     item: ServiceItem;
@@ -36,7 +36,7 @@ export const EthosCard: React.FC<EthosCardProps> = ({ item, index }) => {
             className="w-full"
         >
             <motion.div
-                animate={{ x: index % 2 === 0 ? [-20, 20] : [20, -20] }}
+                animate={{ x: index % 2 === 0 ? [-8, 8] : [8, -8] }}
                 transition={{
                     repeat: Infinity,
                     repeatType: "mirror",
@@ -44,16 +44,17 @@ export const EthosCard: React.FC<EthosCardProps> = ({ item, index }) => {
                     ease: "easeInOut"
                 }}
                 className={clsx(
-                    "relative p-8 rounded-2xl border transition-all duration-300 group overflow-hidden min-h-[300px] flex flex-col justify-center",
+                    "card-hover relative p-8 rounded-2xl border transition-all duration-300 group overflow-hidden min-h-[300px] flex flex-col justify-center",
                     colorClass
                 )}
             >
                 {/* Background Image Layer */}
                 {item.image && (
                     <div className="absolute inset-0 z-0">
-                        <MediaContainer
-                            media={{ type: 'image', src: "https://drive.google.com/drive/folders/18-pO_mtgZm1KTIyXdhIIyt31WG9aG5ro", alt: item.title }}
-                            cover
+                        <img
+                            src={item.image}
+                            alt={item.title}
+                            className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-brand-black/90 via-brand-black/70 to-brand-black/40 group-hover:from-brand-black/95 group-hover:to-brand-black/60 transition-colors duration-500" />
                     </div>
@@ -68,7 +69,7 @@ export const EthosCard: React.FC<EthosCardProps> = ({ item, index }) => {
                             </div>
                             {item.title}
                         </h3>
-                        <div className="space-y-4 text-brand-silver/80 text-lg leading-relaxed font-medium drop-shadow-sm font-serif">
+                        <div className="space-y-4 text-brand-silver/80 text-lg leading-relaxed font-medium drop-shadow-sm">
                             {item.description.split('\n\n').map((paragraph, i) => (
                                 <p key={i} className={clsx(paragraph.startsWith('>') && "pl-4 border-l-4 border-brand-peach/40 italic")}>
                                     {paragraph}

@@ -46,7 +46,7 @@ export const Contact: React.FC = () => {
                 />
             </div>
 
-            <div className="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+            <div className="relative z-10 px-6 py-20 container-wide">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
 
                     {/* Left Column: Info & Text */}
@@ -56,11 +56,11 @@ export const Contact: React.FC = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <h1 className="text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-brand-offwhite font-sans leading-[60px] uppercase">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 tracking-tighter text-brand-offwhite font-sans leading-tight uppercase">
                                 {sections[0]?.title || title}
                             </h1>
 
-                            <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-xl leading-relaxed font-serif">
+                            <p className="text-lg md:text-2xl text-text-muted mb-12 max-w-xl leading-relaxed ">
                                 {sections[0]?.content || "Let's build something exceptional together."}
                             </p>
 
