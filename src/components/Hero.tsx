@@ -4,15 +4,21 @@ import type { HeroSection } from '../data/types';
 import { Button } from './ui/Button';
 import { ArrowRight } from 'lucide-react';
 import { MediaContainer } from './ui/MediaContainer';
+import { useParallax } from '../hooks/useScrollEffects';
 
 interface HeroProps {
     data: HeroSection;
 }
 
 export const Hero: React.FC<HeroProps> = ({ data }) => {
+    const { ref, y } = useParallax(0.4);
+
     return (
-        <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-            {/* Background Layer */}
+        <section
+            ref={ref}
+            className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden"
+        >
+            {/* Background Layer — parallax depth effect */}
             <div className="absolute inset-0 z-0 bg-transparent">
                 {data.backgroundMedia ? (
                     <MediaContainer media={data.backgroundMedia} cover />
@@ -23,7 +29,11 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                 <div className="absolute inset-0 bg-brand-black/60 backdrop-blur-[1px]" />
             </div>
 
-            <div className="relative z-10 container-wide px-6 text-center">
+            {/* Parallax content wrapper — text moves with parallax for depth feel */}
+            <motion.div
+                className="relative z-10 container-wide px-6 text-center will-change-transform"
+                style={{ y }}
+            >
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -52,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                         <ArrowRight size={18} />
                     </Button>
                 </motion.div>
-            </div>
+            </motion.div>
         </section>
     );
 };

@@ -2,7 +2,8 @@ import React from 'react';
 import { content } from '../data/content';
 import { Hero } from '../components/Hero';
 import { AnimatedSection } from '../components/AnimatedSection';
-import { motion } from 'framer-motion';
+import { ScrollReveal } from '../components/ScrollReveal';
+import { ParallaxSection } from '../components/ParallaxSection';
 import { NavLink } from 'react-router-dom';
 import { ArrowRight, Lightbulb, Palette, Megaphone, Sparkles } from 'lucide-react';
 import { Button } from '../components/ui/Button';
@@ -35,31 +36,37 @@ export const Home: React.FC = () => {
         <div className="flex flex-col">
             {hero && <Hero data={hero} />}
 
-            {/* Mission Strip */}
+            {/* Mission Strip — parallax background with fade-in text */}
             {missionSection && (
-                <AnimatedSection className="text-center bg-brand-black !py-20">
-                    <div className="max-w-4xl mx-auto">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-brand-offwhite tracking-tight font-sans uppercase">{missionSection.title}</h2>
-                        <p className="text-base md:text-xl text-text-muted leading-relaxed ">{missionSection.content}</p>
-                    </div>
-                </AnimatedSection>
+                <ParallaxSection speed={0.15} className="bg-brand-black">
+                    <AnimatedSection className="text-center bg-brand-black !py-20">
+                        <div className="max-w-4xl mx-auto">
+                            <ScrollReveal effect="fade-up" duration={0.8}>
+                                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-brand-offwhite tracking-tight font-sans uppercase">{missionSection.title}</h2>
+                            </ScrollReveal>
+                            <ScrollReveal effect="blur" delay={0.15} duration={0.9}>
+                                <p className="text-base md:text-xl text-text-muted leading-relaxed ">{missionSection.content}</p>
+                            </ScrollReveal>
+                        </div>
+                    </AnimatedSection>
+                </ParallaxSection>
             )}
 
-            {/* Service Pillars Overview */}
+            {/* Service Pillars Overview — staggered fade-up cards */}
             <AnimatedSection>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-peach tracking-tight my-8 text-center font-sans uppercase">The Full Marketing Spectrum</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 container-wide">
+                <ScrollReveal effect="fade-up" duration={0.8}>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-peach tracking-tight my-8 text-center font-sans uppercase">The Full Marketing Spectrum</h2>
+                </ScrollReveal>
+                <ScrollReveal stagger={0.12} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-6 container-wide">
                     {homePillarsSummary.map((pillar, idx) => {
                         const IconComponent = pillarIcons[idx];
                         const colors = pillarColors[idx];
                         return (
-                            <motion.div
+                            <ScrollReveal
                                 key={pillar.title}
-                                initial={{ opacity: 0, y: 40 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1, duration: 0.6 }}
-                                className="group perspective-2000"
+                                effect="fade-up"
+                                distance={50}
+                                duration={0.6}
                             >
                                 <div
                                     className={`card-hover relative rounded-2xl border ${colors.border} ${colors.hoverBorder} p-8 h-full flex flex-col items-center text-center transition-all duration-500 hover:shadow-2xl ${colors.glow} overflow-hidden`}
@@ -87,39 +94,42 @@ export const Home: React.FC = () => {
                                         </NavLink>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </ScrollReveal>
                         );
                     })}
-                </div>
+                </ScrollReveal>
             </AnimatedSection>
 
-            {/* NEW: Metrics Showcase */}
+            {/* Metrics Showcase */}
             <MetricsShowcase />
 
-            {/* NEW: Brand Slider */}
+            {/* Brand Slider */}
             <BrandSlider />
 
-            {/* Key Differentiators */}
+            {/* Key Differentiators — staggered fade-up cards */}
             <AnimatedSection className="bg-brand-black !py-20">
                 <div className="text-center mb-16">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-offwhite tracking-tight mb-4 font-sans uppercase">One-Stop Hub for Brand, Marketing & Growth</h2>
-                    <p className="text-base md:text-lg text-text-muted max-w-3xl mx-auto ">We are a collective of sharp thinkers and creative makers delivering scalable, strategic solutions that redefine how brands think, communicate, and influence.</p>
+                    <ScrollReveal effect="fade-up" duration={0.8}>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-offwhite tracking-tight mb-4 font-sans uppercase">One-Stop Hub for Brand, Marketing & Growth</h2>
+                    </ScrollReveal>
+                    <ScrollReveal effect="blur" delay={0.1} duration={0.9}>
+                        <p className="text-base md:text-lg text-text-muted max-w-3xl mx-auto ">We are a collective of sharp thinkers and creative makers delivering scalable, strategic solutions that redefine how brands think, communicate, and influence.</p>
+                    </ScrollReveal>
                 </div>
-                <div className="flex flex-wrap justify-center gap-6">
-                    {content.differentiators.map((diff, idx) => (
-                        <motion.div
+                <ScrollReveal stagger={0.08} className="flex flex-wrap justify-center gap-6">
+                    {content.differentiators.map((diff) => (
+                        <ScrollReveal
                             key={diff.title}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.08, duration: 0.5 }}
+                            effect="fade-up"
+                            distance={40}
+                            duration={0.5}
                             className="card-hover group p-8 rounded-2xl bg-surface/60 border border-white/5 hover:border-brand-blue/30 transition-all duration-300 hover:shadow-lg hover:shadow-brand-blue/5 w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
                         >
                             <h3 className="text-lg font-bold text-brand-peach mb-2 uppercase">{diff.title}</h3>
                             <p className="text-text-muted text-sm leading-relaxed">{diff.description}</p>
-                        </motion.div>
+                        </ScrollReveal>
                     ))}
-                </div>
+                </ScrollReveal>
             </AnimatedSection>
 
             {/* Case Studies Preview
@@ -130,12 +140,10 @@ export const Home: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {content.caseStudies.map((cs, idx) => (
-                            <motion.div
+                            <ScrollReveal
                                 key={cs.brand}
-                                initial={{ opacity: 0, x: idx % 2 === 0 ? -30 : 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
+                                effect={idx % 2 === 0 ? 'fade-left' : 'fade-right'}
+                                duration={0.6}
                                 className="card-hover p-8 rounded-2xl bg-surface border border-white/5 hover:border-brand-blue/30 transition-all group"
                             >
                                 <h3 className="text-xl md:text-2xl font-bold text-brand-blue-light mb-3 uppercase">{cs.brand}</h3>
@@ -147,26 +155,34 @@ export const Home: React.FC = () => {
                                         <p className="text-brand-silver/80">{cs.impact}</p>
                                     </>
                                 )}
-                            </motion.div>
+                            </ScrollReveal>
                         ))}
                     </div>
                 </AnimatedSection>
             )} */}
 
-            {/* NEW: Global Presence */}
+            {/* Global Presence */}
             <GlobalPresence />
 
-            {/* CTA Section */}
-            <AnimatedSection className="text-center !py-24">
-                <div className="max-w-3xl mx-auto">
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-offwhite tracking-tight mb-6 font-sans uppercase">Ready To Make Your Brand Inevitable?</h2>
-                    <p className="text-lg md:text-xl text-text-muted mb-10 ">Let's Make It Happen!</p>
-                    <Button to="/contact" variant="primary">
-                        Get In Touch
-                        <ArrowRight size={18} />
-                    </Button>
-                </div>
-            </AnimatedSection>
+            {/* CTA Section — parallax with scale reveal */}
+            <ParallaxSection speed={0.1}>
+                <AnimatedSection className="text-center !py-24">
+                    <div className="max-w-3xl mx-auto">
+                        <ScrollReveal effect="scale" duration={0.8}>
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-offwhite tracking-tight mb-6 font-sans uppercase">Ready To Make Your Brand Inevitable?</h2>
+                        </ScrollReveal>
+                        <ScrollReveal effect="fade-up" delay={0.15}>
+                            <p className="text-lg md:text-xl text-text-muted mb-10 ">Let's Make It Happen!</p>
+                        </ScrollReveal>
+                        <ScrollReveal effect="fade-up" delay={0.3} distance={30}>
+                            <Button to="/contact" variant="primary">
+                                Get In Touch
+                                <ArrowRight size={18} />
+                            </Button>
+                        </ScrollReveal>
+                    </div>
+                </AnimatedSection>
+            </ParallaxSection>
         </div>
     );
 };

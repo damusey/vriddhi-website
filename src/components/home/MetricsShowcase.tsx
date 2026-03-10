@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { content } from '../../data/content';
 import { AnimatedSection } from '../AnimatedSection';
+import { ScrollReveal } from '../ScrollReveal';
 
 export const MetricsShowcase: React.FC = () => {
     if (!content.metrics) return null;
@@ -14,15 +14,10 @@ export const MetricsShowcase: React.FC = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] pointer-events-none" />
 
             <div className="container-wide px-6 relative z-10">
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
+                <ScrollReveal stagger={0.1} className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
                     {content.metrics.map((metric, idx) => (
                         <AnimatedSection key={idx} className="text-center group !mb-0">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                            >
+                            <ScrollReveal effect="scale" duration={0.5}>
                                 <div className="text-2xl sm:text-4xl md:text-6xl font-bold font-sans text-brand-offwhite mb-4 tracking-tighter">
                                     {metric.prefix && <span className="text-brand-peach/80 text-xl sm:text-3xl align-top mr-1">{metric.prefix}</span>}
                                     {metric.value}
@@ -31,10 +26,10 @@ export const MetricsShowcase: React.FC = () => {
                                 <div className="text-sm md:text-base text-brand-silver/80 uppercase tracking-widest font-semibold group-hover:text-brand-peach transition-colors">
                                     {metric.label}
                                 </div>
-                            </motion.div>
+                            </ScrollReveal>
                         </AnimatedSection>
                     ))}
-                </div>
+                </ScrollReveal>
             </div>
         </section>
     );
