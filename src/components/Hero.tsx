@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter mb-6 text-brand-offwhite font-sans"
+                    className="text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-bold tracking-tighter mb-6 text-brand-offwhite font-sans"
                 >
                     {data.title}
                 </motion.h1>
@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ data }) => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                    className="text-base sm:text-lg md:text-xl text-brand-silver/80 mb-10 max-w-2xl mx-auto leading-relaxed font-bold"
+                    className="text-base sm:text-lg md:text-xl text-brand-silver/80 mb-10 max-w-4xl mx-auto leading-relaxed font-bold"
                 >
                     {data.subtitle}
                 </motion.p>

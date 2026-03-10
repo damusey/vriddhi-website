@@ -9,6 +9,7 @@ interface ButtonProps {
     onClick?: () => void;
     variant?: 'primary' | 'outline';
     className?: string;
+    disabled?: boolean;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -16,7 +17,8 @@ export const Button: React.FC<ButtonProps> = ({
     to,
     onClick,
     variant = 'primary',
-    className
+    className,
+    disabled
 }) => {
     const baseStyles = "px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer font-sans";
     const variants = {
@@ -27,8 +29,9 @@ export const Button: React.FC<ButtonProps> = ({
     const content = (
         <motion.button
             whileTap={{ scale: 0.95 }}
-            className={clsx(baseStyles, variants[variant], className)}
+            className={clsx(baseStyles, variants[variant], className, disabled && 'opacity-50 cursor-not-allowed')}
             onClick={onClick}
+            disabled={disabled}
         >
             {children}
         </motion.button>
