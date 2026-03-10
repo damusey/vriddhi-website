@@ -7,11 +7,11 @@ export const MetricsShowcase: React.FC = () => {
     if (!content.metrics) return null;
 
     return (
-        <section className="pt-24 bg-brand-charcoal text-brand-offwhite relative overflow-hidden">
+        <section className="pt-24 bg-brand-black text-brand-offwhite relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-brand-blue/10 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] pointer-events-none" />
 
             <div className="container-wide px-6 relative z-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">

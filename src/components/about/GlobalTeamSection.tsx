@@ -5,7 +5,7 @@ import { DynamicIcon } from '../ui/DynamicIcon';
 
 export const GlobalTeamSection: React.FC = () => {
     return (
-        <section className="py-24 bg-brand-charcoal relative overflow-hidden">
+        <section className="py-24 bg-brand-black relative overflow-hidden">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-blue/5 rounded-full blur-[100px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
             <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-peach/5 rounded-full blur-[100px] pointer-events-none -translate-x-1/3 translate-y-1/3" />

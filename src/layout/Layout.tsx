@@ -27,7 +27,7 @@ export const Layout: React.FC = () => {
             </main>
 
             {/* Narrativlyy Footer Logo */}
-            <section className="w-full flex justify-center py-8" style={{ backgroundColor: '#1e2024' }}>
+            <section className="w-full flex justify-center py-8" style={{ backgroundColor: '#1A1A1A' }}>
                 <img
                     src="/narratively-footer.png"
                     alt="Narrativlyy"

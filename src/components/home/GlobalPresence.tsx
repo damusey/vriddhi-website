@@ -8,7 +8,7 @@ export const GlobalPresence: React.FC = () => {
     if (!content.globalLocations || content.globalLocations.length === 0) return null;
 
     return (
-        <section className="py-16 bg-surface relative">
+        <section className="py-16 bg-brand-black relative">
             <div className="container-wide px-6">
                 <AnimatedSection className="text-center">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] border border-brand-blue/30 bg-brand-blue/10 text-brand-blue-light mb-6">

@@ -8,7 +8,7 @@ export const LeadershipSection: React.FC = () => {
     if (!content.leadership || content.leadership.length === 0) return null;
 
     return (
-        <section className="py-24 bg-surface relative">
+        <section className="py-24 bg-brand-black relative">
             <div className="container-wide px-6">
                 <AnimatedSection className="text-center mb-16">
                     <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.2em] border border-brand-peach/30 bg-brand-peach/10 text-brand-peach mb-6">
@@ -28,7 +28,7 @@ export const LeadershipSection: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                className="group relative rounded-2xl bg-brand-charcoal overflow-hidden border border-white/5 hover:border-brand-peach/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-peach/10"
+                                className="group relative rounded-2xl bg-brand-black overflow-hidden border border-white/5 hover:border-brand-peach/30 transition-all duration-500 hover:shadow-2xl hover:shadow-brand-peach/10"
                             >
                                 {/* Image Placeholder / Container */}
                                 <div className="aspect-[4/5] bg-brand-blue/10 relative overflow-hidden flex items-center justify-center">

@@ -56,7 +56,7 @@ export const About: React.FC = () => {
             )}
 
             {/* Testimonials */}
-            <AnimatedSection className="bg-brand-charcoal/30 !py-24">
+            <AnimatedSection className="bg-brand-black !py-24">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-peach tracking-tight mb-4 font-sans px-5 uppercase">Helping ambitious brands and leaders unlock their next dimension of growth!</h2>
                 </div>

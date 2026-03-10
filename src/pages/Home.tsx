@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
 
             {/* Mission Strip */}
             {missionSection && (
-                <AnimatedSection className="text-center bg-brand-charcoal/50 !py-20">
+                <AnimatedSection className="text-center bg-brand-black !py-20">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-brand-offwhite tracking-tight font-sans uppercase">{missionSection.title}</h2>
                         <p className="text-base md:text-xl text-text-muted leading-relaxed ">{missionSection.content}</p>
@@ -100,7 +100,7 @@ export const Home: React.FC = () => {
             <BrandSlider />
 
             {/* Key Differentiators */}
-            <AnimatedSection className="bg-brand-charcoal/30 !py-20">
+            <AnimatedSection className="bg-brand-black !py-20">
                 <div className="text-center mb-16">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-offwhite tracking-tight mb-4 font-sans uppercase">One-Stop Hub for Brand, Marketing & Growth</h2>
                     <p className="text-base md:text-lg text-text-muted max-w-3xl mx-auto ">We are a collective of sharp thinkers and creative makers delivering scalable, strategic solutions that redefine how brands think, communicate, and influence.</p>

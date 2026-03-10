@@ -512,8 +512,8 @@ export const content: SiteConfig = {
                 ctaText: 'Get In Touch',
                 ctaLink: '/contact',
                 backgroundMedia: {
-                    type: 'video',
-                    src: '/videos/hero-banner.mp4',
+                    type: 'image',
+                    src: '/images/homepage/website-banner.webp',
                     alt: 'Wriddhi hero background',
                 }
             },
