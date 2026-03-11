@@ -82,7 +82,7 @@ export const Footer: React.FC = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-white/5">
-                <div className="container-wide px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs  text-brand-silver">
+                <div className="container-wide px-6 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs  text-brand-silver" style={{ paddingTop: '16px', paddingBottom: '16px' }}>
                     <p>{content.footer.copyright}</p>
                     <div className="flex gap-4">
                         <Link to="/privacy-policy" className="hover:text-brand-peach transition-colors">Privacy Policy</Link>
