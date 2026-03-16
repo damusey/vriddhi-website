@@ -26,7 +26,7 @@ export const GlobalPresence: React.FC = () => {
                     </ScrollReveal>
                 </AnimatedSection>
 
-                <ScrollReveal stagger={0.1} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-[-80px]">
+                <ScrollReveal stagger={0.1} className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-8 mb-[-40px] md:mb-[-80px]">
                     {content.globalLocations.map((loc) => (
                         <AnimatedSection key={loc.city} className="!mb-0">
                             <ScrollReveal
@@ -34,12 +34,13 @@ export const GlobalPresence: React.FC = () => {
                                 distance={30}
                                 duration={0.5}
                             >
-                                <div className="group p-8 rounded-2xl bg-brand-charcoal/30 border border-white/5 hover:border-brand-peach/30 transition-all duration-300 text-center">
-                                    <div className="w-16 h-16 mx-auto rounded-full bg-brand-peach/10 text-brand-peach flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-brand-peach group-hover:text-brand-charcoal transition-all duration-300">
-                                        <DynamicIcon name="MapPin" size={28} />
+                                <div className="group p-4 sm:p-6 md:p-8 rounded-2xl bg-brand-charcoal/30 border border-white/5 hover:border-brand-peach/30 transition-all duration-300 text-center flex flex-col items-center">
+                                    <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mx-auto rounded-full bg-brand-peach/10 text-brand-peach flex items-center justify-center mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 group-hover:bg-brand-peach group-hover:text-brand-charcoal transition-all duration-300">
+                                        <DynamicIcon name="MapPin" size={20} className="sm:hidden" />
+                                        <DynamicIcon name="MapPin" size={28} className="hidden sm:block" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-brand-offwhite mb-2">{loc.city}</h3>
-                                    <p className="text-brand-peach font-medium mb-3">{loc.country}</p>
+                                    <h3 className="text-base sm:text-xl md:text-2xl font-bold text-brand-offwhite mb-1 md:mb-2 leading-tight w-full truncate">{loc.city}</h3>
+                                    <p className="text-brand-peach font-medium text-xs sm:text-sm md:text-base mb-2 md:mb-3">{loc.country}</p>
                                 </div>
                             </ScrollReveal>
                         </AnimatedSection>
