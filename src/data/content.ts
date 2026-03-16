@@ -429,11 +429,11 @@ export const content: SiteConfig = {
         },
         {
             brand: 'SariVerse',
-            servicesProvided: 'Brand Identity, eCommerce Strategy, Shopify Development, PR Media',
+            servicesProvided: 'Social Media, Strategic Consulting',
         },
         {
             brand: 'Clean4Wheels',
-            servicesProvided: 'Brand Identity, Website Development, Performance Marketing, SEO',
+            servicesProvided: 'Brand Identity, Website Development, Performance Marketing',
         },
         {
             brand: 'Hawaiadda',
